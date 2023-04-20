@@ -14,7 +14,7 @@ if [ -d $POKY_TOP_DIR ]; then
 	exit 1
 fi
 
-# the version of repo in Ubuntu 18.04.6 LTS is broken, so try to 
+# the version of repo in Ubuntu 18.04.6 LTS is broken, so try to
 # bootstrap up to a working version.
 mkdir -p bin
 curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo
@@ -23,8 +23,8 @@ chmod a+rx bin/repo
 mkdir $POKY_TOP_DIR
 cd $POKY_TOP_DIR
 
-../bin/repo init -u https://github.com/fmhess/poky-fluke-cda-manifest -b ${POKY_BRANCH} ||
-    python3 ../bin/repo init -u https://github.com/fmhess/poky-fluke-cda-manifest -b ${POKY_BRANCH}
+../bin/repo init -u https://github.com/flukeopensrc/poky-fluke-cda-manifest -b ${POKY_BRANCH} ||
+    python3 ../bin/repo init -u https://github.com/flukeopensrc/poky-fluke-cda-manifest -b ${POKY_BRANCH}
 python3 .repo/repo/repo sync
 
 mkdir -p build/conf/
