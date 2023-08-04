@@ -33,11 +33,6 @@ fi
 mkdir $MAN_DIR
 cd $MAN_DIR
 
-# echo "Using repo from: ${REPO_PATH}"
-# python3 ./bin/repo init -u https://github.com/flukeopensrc/cda-manifest -b ${ANGSTROM_BRANCH} ||
-#     python3 ./bin/repo init -u https://github.com/flukeopensrc/cda-manifest -b ${ANGSTROM_BRANCH}
-# python3 .repo/repo/repo sync
-
 echo "Using repo from: ${REPO_PATH}"
 ${REPO_PATH} init -u https://github.com/flukeopensrc/cda-manifest -b ${ANGSTROM_BRANCH} ||
     ${REPO_PATH} init -u https://github.com/flukeopensrc/cda-manifest -b ${ANGSTROM_BRANCH}
